@@ -1,0 +1,25 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #1c1c1c;
+}
+
+.links {
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+    background-color: #04AA6D;
+    padding: 10px 20px;
+    border-radius: 5px;
+}

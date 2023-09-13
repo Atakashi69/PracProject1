@@ -1,10 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <title>My Dictionary</title>
 </head>
 <body>
+
+    <div class="links">
+        <a href="{% url 'words_list' %}">
+            Список слов
+        </a>
+
+        <a href="{% url 'add_word' %}">
+            Добавить новое слово
+        </a>
+    </div>
 
 </body>
 </html>

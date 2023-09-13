@@ -1,3 +1,5 @@
 Привет-Hello
 Дом-House
 Стол-Table
+Стул-Chair
+Компьютер-Computer

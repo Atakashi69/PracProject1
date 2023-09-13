@@ -1,12 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/words_list.css' %}">
     <title>Words List</title>
 </head>
 <body>
 
     <table class="words_list">
+        <tr>
+            <th>Русский</th>
+            <th>Английский</th>
+        </tr>
         {% for word_ru, word_en in words %}
         <tr>
             <td>{{ word_ru }}</td>
