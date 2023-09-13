@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .mainapp_utils import filerw
 
 
 # Create your views here.
@@ -11,7 +12,14 @@ def home(request):
 def words_list(request):
     template_name = 'words_list.html'
 
-    return render(request, template_name)
+    words_ru, words_en = filerw.get_words()
+    words = zip(words_ru, words_en)
+
+    context = {
+        'words': words
+    }
+
+    return render(request, template_name, context=context)
 
 
 def add_word(request):
