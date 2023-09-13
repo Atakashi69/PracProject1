@@ -4,7 +4,6 @@ from .forms import AddWordForm
 from .mainapp_utils import filerw
 
 
-# Create your views here.
 def home(request):
     template_name = 'home.html'
 
