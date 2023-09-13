@@ -12,6 +12,6 @@ def get_words():
         words_en.append(word2)
     return words_ru, words_en
 
-def add_word(word_ru: str, word_en: str):
+def add_words(word_ru: str, word_en: str):
     with open(os.path.join(BASE_DIR, 'mainapp/dictionary.txt'), "a", encoding="utf-8") as file:
         file.write(word_ru + "-" + word_en + "\n")

@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from .forms import AddWordForm
 from .mainapp_utils import filerw
 
 
@@ -25,4 +27,16 @@ def words_list(request):
 def add_word(request):
     template_name = 'add_word.html'
 
-    return render(request, template_name)
+    if request.method == 'POST':
+        form = AddWordForm(request.POST)
+        if form.is_valid():
+            filerw.add_words(form.cleaned_data['word_ru'], form.cleaned_data['word_en'])
+            return redirect('home')
+    else:
+        form = AddWordForm()
+
+    context = {
+        'form': form
+    }
+
+    return render(request, template_name, context=context)
